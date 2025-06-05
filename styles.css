@@ -110,6 +110,59 @@ button:hover {
 .result-value {
     font-weight: 600;
     color: #2d3748;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.indicator.good {
+    background-color: #48bb78;
+}
+
+.indicator.caution {
+    background-color: #ecc94b;
+}
+
+.indicator.bad {
+    background-color: #f56565;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 0.5rem;
+    cursor: help;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #2d3748;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.875rem;
+    font-weight: normal;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 
 @media (max-width: 768px) {

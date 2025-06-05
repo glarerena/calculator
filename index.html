@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multifamily Rental Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Multifamily Rental Calculator</h1>
+            
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="propertyValue">Property Value ($)</label>
+                    <input type="number" id="propertyValue" placeholder="Enter property value">
+                </div>
+
+                <div class="input-field">
+                    <label for="downPayment">Down Payment ($)</label>
+                    <input type="number" id="downPayment" placeholder="Enter down payment">
+                </div>
+
+                <div class="input-field">
+                    <label for="interestRate">Interest Rate (%)</label>
+                    <input type="number" id="interestRate" placeholder="Enter interest rate" step="0.01">
+                </div>
+
+                <div class="input-field">
+                    <label for="loanTerm">Loan Term (Years)</label>
+                    <input type="number" id="loanTerm" placeholder="Enter loan term">
+                </div>
+
+                <div class="input-field">
+                    <label for="units">Number of Units</label>
+                    <input type="number" id="units" placeholder="Enter number of units">
+                </div>
+
+                <div class="input-field">
+                    <label for="monthlyRent">Monthly Rent per Unit ($)</label>
+                    <input type="number" id="monthlyRent" placeholder="Enter monthly rent">
+                </div>
+
+                <div class="input-field">
+                    <label for="vacancyRate">Vacancy Rate (%)</label>
+                    <input type="number" id="vacancyRate" placeholder="Enter vacancy rate" step="0.01">
+                </div>
+
+                <div class="input-field">
+                    <label for="expenses">Monthly Expenses ($)</label>
+                    <input type="number" id="expenses" placeholder="Enter monthly expenses">
+                </div>
+            </div>
+
+            <button onclick="calculateReturns()">Calculate Returns</button>
+
+            <div class="results" id="results">
+                <div class="result-item">
+                    <span class="result-label">Monthly Mortgage Payment:</span>
+                    <span class="result-value" id="monthlyMortgage">$0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Total Monthly Income:</span>
+                    <span class="result-value" id="totalIncome">$0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Net Operating Income (NOI):</span>
+                    <span class="result-value" id="noi">$0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Cash Flow:</span>
+                    <span class="result-value" id="cashFlow">$0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Cap Rate:</span>
+                    <span class="result-value" id="capRate">0%</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Cash on Cash Return:</span>
+                    <span class="result-value" id="cashOnCash">0%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
